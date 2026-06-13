@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Child Location</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+    font-family:Arial;
+    background:#bffcff;
+
+}
+
+
+.map-screen{
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    gap:30px;
+
+}
+
+
+h1{
+
+    font-size:45px;
+
+    color:white;
+
+    text-shadow:
+    4px 4px black,
+    0 0 20px cyan;
+
+}
+
+
+
+#map{
+
+    width:80%;
+    height:65%;
+
+    border:8px solid white;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 0 30px cyan;
+
+}
+
+
+
+.back-btn{
+
+    width:180px;
+    height:50px;
+
+    border-radius:25px;
+
+    border:none;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 8px black,
+    0 0 20px cyan;
+
+}
+
+
+h3{
+
+text-align:center;
+background:white;
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<div class="map-screen">
+
+
+<h1>📍 Child Live Location</h1>
+
+
+<div id="map">
+
+<h2 style="text-align:center;margin-top:100px;">
+Waiting For GPS...
+</h2>
+
+
+</div>
+
+
+
+<button 
+class="back-btn"
+onclick="history.back()">
+
+Back
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<script>
+
+
+let mapBox =
+document.getElementById("map");
+
+
+
+
+// fetch ESP GPS every 2 sec
+
+async function updateLocation(){
+
+
+try{
+
+
+let response =
+await fetch("/api/esp");
+
+
+let data =
+await response.json();
+
+
+
+console.log(data);
+
+
+
+if(data && data.LAT && data.LON)
+{
+
+
+let lat=data.LAT;
+
+let lon=data.LON;
+
+
+
+mapBox.innerHTML = `
+
+
+<iframe
+
+width="100%"
+height="85%"
+
+src="https://maps.google.com/maps?q=${lat},${lon}&z=17&output=embed">
+
+
+</iframe>
+
+
+
+<h3>
+
+📍 Latitude : ${lat}
+
+<br>
+
+📍 Longitude : ${lon}
+
+<br>
+
+🛰 ESP32 GPS LIVE
+
+
+</h3>
+
+
+`;
+
+
+
+}
+
+else{
+
+
+mapBox.innerHTML =
+
+`
+<h2 style="text-align:center;margin-top:100px">
+
+Waiting for ESP32 GPS 📡
+
+</h2>
+
+`;
+
+}
+
+
+
+}
+
+
+catch(err){
+
+
+console.log(err);
+
+
+mapBox.innerHTML =
+
+"<h2>Server Error</h2>";
+
+
+}
+
+
+
+}
+
+
+
+
+
+updateLocation();
+
+
+// refresh location
+
+setInterval(
+updateLocation,
+2000
+);
+
+
+
+</script>
+
+
+</body>
+
+</html>

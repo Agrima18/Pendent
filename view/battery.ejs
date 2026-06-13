@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<title>Watch Status</title>
+
+<link 
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    width:100vw;
+    min-height:100vh;
+
+    font-family:"Segoe UI",Arial;
+
+
+    background-image:
+
+    linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.45)
+    ),
+
+    url("/BATTERY.png");
+
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    background-attachment:fixed;
+
+}
+
+
+
+/* MAIN */
+
+.dashboard{
+
+    padding:40px;
+
+}
+
+
+
+h1{
+
+    text-align:center;
+
+    color:white;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+h1 i{
+
+    color:#00eaff;
+
+}
+
+
+
+
+
+/* CARDS */
+
+.cards{
+
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+
+
+    gap:30px;
+
+}
+
+
+
+
+
+.card{
+
+
+    height:220px;
+
+
+    border-radius:30px;
+
+
+
+    background:
+
+    rgba(255,255,255,.15);
+
+
+
+    backdrop-filter:
+
+    blur(20px);
+
+
+
+    border:
+
+    1px solid rgba(255,255,255,.3);
+
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+
+    box-shadow:
+
+    0 10px 35px rgba(0,0,0,.4);
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.card:hover{
+
+
+    transform:
+    translateY(-10px);
+
+
+
+    box-shadow:
+
+    0 15px 45px #00eaff;
+
+
+}
+
+
+
+
+
+
+.icon{
+
+
+    width:80px;
+
+    height:80px;
+
+
+    border-radius:50%;
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #00eaff,
+    #0066ff
+    );
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    color:white;
+
+
+    font-size:35px;
+
+
+    box-shadow:
+    0 0 25px #00eaff;
+
+
+}
+
+
+
+.title{
+
+    margin-top:20px;
+
+    color:#ddd;
+
+    font-size:20px;
+
+}
+
+
+
+
+.value{
+
+    margin-top:10px;
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+}
+
+
+
+
+.back{
+
+    display:block;
+
+    margin:40px auto;
+
+
+    width:170px;
+    height:55px;
+
+
+    border:none;
+
+    border-radius:30px;
+
+
+    background:
+    rgba(255,255,255,.2);
+
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+
+
+<body>
+
+
+<div class="dashboard">
+
+
+
+<h1>
+
+<i class="fa-solid fa-watch"></i>
+
+ WATCH STATUS
+
+</h1>
+
+
+
+
+<div class="cards">
+
+
+
+
+
+<div class="card">
+
+<div class="icon">
+<i class="fa-solid fa-battery-full"></i>
+</div>
+
+<div class="title">
+Battery Level
+</div>
+
+<div class="value" id="battery">
+--
+</div>
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+<div class="icon">
+<i class="fa-solid fa-wifi"></i>
+</div>
+
+<div class="title">
+Signal Strength
+</div>
+
+<div class="value" id="signal">
+--
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+<div class="icon">
+<i class="fa-solid fa-bolt"></i>
+</div>
+
+<div class="title">
+Charging
+</div>
+
+<div class="value" id="charge">
+--
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+<div class="icon">
+<i class="fa-solid fa-heart-pulse"></i>
+</div>
+
+<div class="title">
+Device Health
+</div>
+
+<div class="value" id="health">
+--
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+<div class="icon">
+<i class="fa-solid fa-satellite-dish"></i>
+</div>
+
+<div class="title">
+ESP32
+</div>
+
+<div class="value" id="esp">
+Connecting
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+<div class="icon">
+<i class="fa-solid fa-clock"></i>
+</div>
+
+<div class="title">
+Last Update
+</div>
+
+<div class="value" id="time">
+--
+</div>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+<div class="buttons">
+
+
+<button
+onclick="openForm()"
+class="enquiry">
+
+<i class="fa-solid fa-headset"></i>
+
+ Enquiry
+
+</button>
+
+
+
+<button
+onclick="history.back()"
+class="back">
+
+⬅ Back
+
+</button>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+
+
+async function updateWatch(){
+
+
+try{
+
+
+let response =
+await fetch("/api/esp");
+
+
+
+let data =
+await response.json();
+
+
+
+
+battery.innerHTML =
+data.battery+"%";
+
+
+
+signal.innerHTML =
+data.signal;
+
+
+
+charge.innerHTML =
+data.charging
+?
+"YES ⚡"
+:
+"NO";
+
+
+
+esp.innerHTML =
+"ONLINE 🟢";
+
+
+
+time.innerHTML =
+new Date()
+.toLocaleTimeString();
+
+
+
+
+
+if(data.battery>60){
+
+
+health.innerHTML =
+"Excellent 💚";
+
+
+}
+
+else if(data.battery>30){
+
+
+health.innerHTML =
+"Normal 💛";
+
+
+}
+
+else{
+
+
+health.innerHTML =
+"LOW 🚨";
+
+
+}
+
+
+
+}
+
+
+catch(err){
+
+
+esp.innerHTML =
+"OFFLINE 🔴";
+
+
+}
+
+
+}
+
+
+
+setInterval(
+updateWatch,
+1000
+);
+
+
+
+updateWatch();
+
+
+
+</script>
+
+
+</body>
+
+</html>

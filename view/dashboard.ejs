@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<title>Child Safety Quest</title>
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+<!-- FONT AWESOME -->
+<link 
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+<style>
+
+
+/* NAVBAR */
+
+
+.navbar{
+
+position:fixed;
+
+top:20px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+
+width:90%;
+
+height:70px;
+
+
+padding:0 30px;
+
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+
+border-radius:40px;
+
+
+background:
+
+rgba(255,255,255,.18);
+
+
+backdrop-filter:
+
+blur(20px);
+
+
+
+border:
+
+1px solid rgba(255,255,255,.35);
+
+
+
+box-shadow:
+
+0 0 30px cyan;
+
+
+z-index:1000;
+
+}
+
+
+
+
+.logo{
+
+color:white;
+
+font-size:25px;
+
+font-weight:bold;
+
+}
+
+
+
+.logo i{
+
+color:#00eaff;
+
+}
+
+
+
+
+
+.links{
+
+display:flex;
+
+gap:25px;
+
+}
+
+
+
+
+.links a{
+
+text-decoration:none;
+
+color:white;
+
+font-size:17px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+
+
+.links i{
+
+color:#00eaff;
+
+margin-right:5px;
+
+}
+
+
+
+.links a:hover{
+
+color:#00eaff;
+
+transform:translateY(-5px);
+
+}
+
+
+
+/* push dashboard below navbar */
+
+.dashboard{
+
+padding-top:110px;
+
+}
+
+
+</style>
+
+
+</head>
+
+
+
+
+
+<body>
+
+
+
+
+
+<!-- NAVBAR -->
+
+
+<nav class="navbar">
+
+
+
+<div class="logo">
+
+<i class="fa-solid fa-shield-heart"></i>
+
+ Child Safety
+
+</div>
+
+
+
+
+
+<div class="links">
+
+
+<a href="/dashboard">
+
+<i class="fa-solid fa-house"></i>
+Home
+
+</a>
+
+
+
+
+<a href="/gps">
+
+<i class="fa-solid fa-location-dot"></i>
+Tracker
+
+</a>
+
+
+
+
+<a href="/contact">
+
+<i class="fa-solid fa-phone"></i>
+Contacts
+
+</a>
+
+
+
+
+
+<a href="/alerts">
+
+<i class="fa-solid fa-bell"></i>
+Alerts
+
+</a>
+
+
+
+
+
+<a onclick="sendSOS()">
+
+<i class="fa-solid fa-triangle-exclamation"></i>
+SOS
+
+</a>
+
+
+
+
+
+<a href="/quiz">
+
+<i class="fa-solid fa-gamepad"></i>
+Quiz
+
+</a>
+
+
+
+</div>
+
+
+
+</nav>
+
+
+
+
+
+
+
+
+<div class="dashboard">
+
+
+
+
+<div class="button-grid">
+
+
+
+
+
+<div class="contact-box">
+
+
+<img 
+src="/CONTACTS.png"
+class="game-btn"
+onclick="openContacts()">
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="map-box">
+
+
+<img 
+src="/LOCATION.png"
+class="game-btn"
+onclick="openLocation()">
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="gps-box">
+
+
+<img 
+src="/HEALTH.png"
+class="game-btn"
+onclick="openGPS()">
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="battery-box">
+
+
+<img 
+src="/BATTERY1.png"
+class="game-btn"
+onclick="openBattery()">
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+
+
+function openLocation(){
+
+window.location.href="/location";
+
+}
+
+
+
+function openContacts(){
+
+window.location.href="/contact";
+
+}
+
+
+
+function openGPS(){
+
+window.location.href="/gps";
+
+}
+
+
+
+function openBattery(){
+
+window.location.href="/battery";
+
+}
+
+
+
+function sendSOS(){
+
+alert(
+
+"🚨 SOS ACTIVATED\n\n"+
+
+"📍 Location shared\n"+
+
+"👨‍👩‍👧 Parents notified"
+
+);
+
+}
+
+
+</script>
+
+
+
+</body>
+
+</html>
