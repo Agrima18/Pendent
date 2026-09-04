@@ -288,5 +288,11 @@ Recurring annual public budgets ensure long-term sustainability beyond CSR pilot
 - Integrate additional health-monitoring sensors and predictive anomaly detection.
 - Formalize CSR/PPP partnerships and pilot programs aligned with existing government child-safety schemes.
 ---
+ ## Team Members
+ 1.Agrima Adarsh (Prototype Implementation and Software Interface)
+ 2.Gona Meghna(Power Analysis)
+ 3.Siya Talwar(Market Analysis and Launching strategy)
+ 4.Taufika(Success Criteria and Simulation)
+ 5.Priya(Ideation and Simulation)
  
 *KAVACH — A small wearable. A big promise. Keeping children safe, every step of the way.*
