@@ -72,9 +72,9 @@ A next-generation smart safety wearable that keeps children safe, connected, and
 <img width="1994" height="1123" alt="image" src="https://github.com/user-attachments/assets/aeec3f4d-188d-43bc-b7c6-eb89ddf3c7d3" />
 
 
-
 ###  GPS tracking and child live location
-<img width="1994" height="1123" alt="image" src="https://github.com/user-attachments/assets/aeec3f4d-188d-43bc-b7c6-eb89ddf3c7d3" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1b13de63-ea21-4d30-8081-04ab331cde48" />
+
 
 ## Market Research & Insights
  
