@@ -65,7 +65,7 @@ A next-generation smart safety wearable that keeps children safe, connected, and
 
 
 
-## Kaavach.com
+## [Click here to view user-interface Kaavach.com](https://child-safety-1.onrender.com/)
 ### Landing Page
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c5310e9a-8512-49c9-8804-11bd6b429ba0" />
 
