@@ -51,7 +51,8 @@ A next-generation smart safety wearable that keeps children safe, connected, and
 **Core focus:** Understanding the child-safety problem through affordability, weak-network reliability, and the need for timely awareness of lost, delayed, distressed, or medically vulnerable children.
  
 ---
-## Hardware Implementation
+## [Click to view Hardware Implementation](https://drive.google.com/file/d/1_ViYEi3zPdkb3iJHjHMLUKKWtFmMxVRQ/view?usp=drivesdk)
+)
 ### Kid 's Side
 <img width="392" height="221" alt="image" src="https://github.com/user-attachments/assets/d7de3d76-7df7-4e7d-a788-871b98adf6eb" />
 
