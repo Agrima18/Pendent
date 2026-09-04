@@ -61,6 +61,21 @@ A next-generation smart safety wearable that keeps children safe, connected, and
 ### Parent Side
 <img width="392" height="221" alt="image" src="https://github.com/user-attachments/assets/61eab471-c8ab-4a67-a68d-fd3387daca59" />
 
+
+
+
+## Kaavach.com
+### Landing Page
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c5310e9a-8512-49c9-8804-11bd6b429ba0" />
+
+###  Home Page
+<img width="1994" height="1123" alt="image" src="https://github.com/user-attachments/assets/aeec3f4d-188d-43bc-b7c6-eb89ddf3c7d3" />
+
+
+
+###  GPS tracking and child live location
+<img width="1994" height="1123" alt="image" src="https://github.com/user-attachments/assets/aeec3f4d-188d-43bc-b7c6-eb89ddf3c7d3" />
+
 ## Market Research & Insights
  
 Survey conducted via Google Forms — **40+ responses from parents/guardians**.
