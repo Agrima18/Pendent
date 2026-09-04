@@ -11,8 +11,8 @@ A next-generation smart safety wearable that keeps children safe, connected, and
 ## Table of Contents
  
 - [Problem Statement](#problem-statement)
-- Hardware Implementation
-- User-Interface
+- [Hardware Implementation](#Hardware)
+- [User-Interface](#User-Interface)
 - [Market Research & Insights](#market-research--insights)
 - [Existing Solutions & Gaps](#existing-solutions--gaps)
 - [Design Requirements](#design-requirements)
@@ -52,6 +52,15 @@ A next-generation smart safety wearable that keeps children safe, connected, and
  
 ---
 ## Hardware Implementation
+### Kid 's Side
+<img width="406" height="437" alt="image" src="https://github.com/user-attachments/assets/aa1d6ef6-80e4-4320-b047-bcafbf6dd8ac" />
+
+
+
+
+
+### Parent Side
+<img width="392" height="221" alt="image" src="https://github.com/user-attachments/assets/61eab471-c8ab-4a67-a68d-fd3387daca59" />
 
 ## Market Research & Insights
  
