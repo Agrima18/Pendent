@@ -53,9 +53,7 @@ A next-generation smart safety wearable that keeps children safe, connected, and
 ---
 ## Hardware Implementation
 ### Kid 's Side
-<img width="406" height="437" alt="image" src="https://github.com/user-attachments/assets/aa1d6ef6-80e4-4320-b047-bcafbf6dd8ac" />
-
-
+<img src="https://github.com/user-attachments/assets/aa1d6ef6-80e4-4320-b047-bcafbf6dd8ac" style="transform: rotate(90deg)">
 
 
 
